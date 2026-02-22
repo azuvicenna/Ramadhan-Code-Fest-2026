@@ -73,3 +73,6 @@
 [submodule "MamboSU"]
 	path = MamboSU
 	url = https://github.com/RapliVx/KernelSU.git
+[submodule "floodzy"]
+	path = floodzy
+	url = https://github.com/MattYudha/floodzy.git
