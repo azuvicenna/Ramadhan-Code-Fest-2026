@@ -42,23 +42,23 @@ export default function App() {
   const nerakaPercentage = 100 - surgaPercentage;
 
   return (
-    <div className="w-full max-w-md bg-white border border-gray-200 rounded-xl p-6 shadow-sm mx-auto">
-      <Header />
-      
-      <StatsBar 
-        surgaPercentage={surgaPercentage} 
-        nerakaPercentage={nerakaPercentage} 
-      />
-      
-      <InputSection 
-        description={description} 
-        onDescriptionChange={setDescription} 
-        onAddAmal={handleAddAmal} 
-      />
-      
-      <FintechSection />
-      
-      <HistoryLog history={history} />
+    <div className="w-full max-w-4xl bg-white border border-gray-200 rounded-xl shadow-sm mx-auto grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+      <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-200">
+        <Header />
+        <StatsBar 
+          surgaPercentage={surgaPercentage} 
+          nerakaPercentage={nerakaPercentage} 
+        />
+        <InputSection 
+          description={description} 
+          onDescriptionChange={setDescription} 
+          onAddAmal={handleAddAmal} 
+        />
+      </div>
+      <div className="p-6 md:p-8 bg-gray-50/50 flex flex-col gap-6">
+        <FintechSection />
+        <HistoryLog history={history} />
+      </div>
     </div>
   );
 }
